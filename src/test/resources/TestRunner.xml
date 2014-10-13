@@ -1,0 +1,66 @@
+<suite name="Test Runner" verbose="10" preserve-order="false">  <!-- You may also include other options on this line: parallel="classes" thread-count="15", etc. -->
+
+  <!-- Testing Platform, Operating System -->
+  <!--<parameter name="selenium.os" value="XP"/>-->
+  <!--<parameter name="selenium.os" value="MAC"/>-->
+  <parameter name="selenium.os" value="LINUX"/>
+  <!--<parameter name="selenium.os" value="ANDROID"/>-->
+  <!--<parameter name="selenium.os" value="ANY"/>-->
+
+  <!-- Browser Settings = Please put your browser selections in this section. They can include Chrome, FireFox, IE, Safari, etc.
+  For CHROME (and maybe others) you will need to install the Selenium Chrome Driver into your home directory (for either Windows or Linux) -->
+  <parameter name="selenium.browser" value="firefox"/>
+  <parameter name="selenium.browser.version" value="32"/>
+
+  <!--<parameter name="selenium.browser" value="chrome"/>-->
+  <!--<parameter name="selenium.browser.version" value="37"/>-->
+
+  <!--<parameter name="selenium.browser" value="ie"/>-->
+  <!--<parameter name="selenium.browser.version" value="10"/>-->
+
+  <!--<parameter name="selenium.browser" value="safari"/>-->
+  <!--<parameter name="selenium.browser.version" value="x"/>-->
+
+  <!-- Sauce Labs Account Information = You can go to Sauce Labs and grab your username and an access key. -->
+  <parameter name="sauce.user.name" value=""/>             <!-- enter your saucelabs username here -->
+  <parameter name="sauce.user.key" value=""/>              <!-- enter your saucelabs user key here -->
+
+   <!--This parameter is where you want to run your tests: LOCALLY, On a REMOTE grid, or via SAUCE Labs. -->
+  <!--<parameter name="run.location" value="REMOTE"/>-->
+  <!--<parameter name="selenium.server" value="" />      &lt;!&ndash; enter your local or grid selenium server here&ndash;&gt;-->
+
+  <parameter name="run.location" value="LOCAL"/>
+  <parameter name="selenium.server" value="http://127.0.0.1:4444/wd/hub" />            <!-- enter your local or grid selenium server here -->
+
+  <!--<parameter name="run.location" value="SAUCE"/>-->
+  <!--<parameter name="selenium.server" value="@ondemand.saucelabs.com:80/wd/hub" />-->
+
+  <!-- Reference Settings = Please put your testing target here. Include any support you need for your target location. -->
+  <!-- Test Environment -->
+  <parameter name="working.url" value="http://www.google.com" />                <!-- enter your working URL, your base project, tests location here -->
+
+  <!-- Testing Settings = Please include or exclude your groups in this section. You may also run by Suite or by Test. It is all defined below. -->
+  <test name="Run Specific Test Classes By Group, Package, or Class">
+    <groups>
+      <run>
+
+        <!-- we exclude tests as "bugs" for testing purposes only -->
+        <!--<exclude name="bugs"/>-->
+        <!-- we include the tests we want to run -->
+        <include name="exampleTest"/>
+        <include name="exampleSuite"/>
+
+      </run>
+    </groups>
+    <packages>
+
+      <package name="org.IntelligentSigma.selenium.suites.*"/>
+
+    </packages>
+    <classes>
+
+      <!--<class name="org.IntelligentSigma.selenium.suites.ExampleSuite"/>-->
+
+    </classes>
+  </test>
+</suite>

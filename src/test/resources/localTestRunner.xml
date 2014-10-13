@@ -1,0 +1,53 @@
+<suite name="Local Test Runner" verbose="10" preserve-order="false">  <!-- You may also include other options on this line: parallel="classes" thread-count="15", etc. -->
+
+  <!-- SauceLabs: Browser Settings = Please put your browser selections in this section. They can include Chrome, FireFox, IE, Safari, etc.
+  For CHROME (and maybe others) you will need to install the Selenium Chrome Driver into your home directory (for either Windows or Linux) -->
+  <parameter name="selenium.browser" value="${selenium.browser}"/>
+  <parameter name="selenium.browser.version" value="${selenium.browser.version}"/>
+
+  <!-- SauceLabs: Testing Platform, Operating System -->
+  <parameter name="selenium.os" value="${selenium.os}"/>
+
+  <!-- Sauce Labs Account Information = You can go to Sauce Labs and grab your username and an access key. -->
+  <parameter name="sauce.user.name" value=""/>
+  <parameter name="sauce.user.key" value=""/>
+
+  <!--Selenium Server Settings = Please put your environment settings here. The location of your tests environment and any support you need for it. -->
+  <parameter name="selenium.links.host" value="${selenium.links.host}"/>
+  <parameter name="selenium.server" value="${selenium.server}" />
+
+  <!-- This parameter is where you want to run your tests: LOCALLy, On the REMOTE grid, or via SAUCE Labs. -->
+  <parameter name="run.location" value="${run.location}"/>
+
+  <!-- Reference Settings = Please put your testing target here. Include any support you need for your target location. -->
+  <!-- Environment -->
+  <parameter name="selenium.api.host" value="${selenium.api.host}" />
+  <parameter name="selenium.ct.host" value="${selenium.ct.host}" />
+  <parameter name="working.url" value="${working.url}" />
+
+
+  <!-- Testing Settings = Please include or exclude your groups in this section. You may also run by Suite or by Test. It is all defined below. -->
+  <test name="Run Specific Test Classes By Group, Package, or Class">
+    <groups>
+      <run>
+
+        <!-- we exclude tests as "bugs" for testing purposes only -->
+        <!--<exclude name="bugs"/>-->
+        <!-- we include the tests we want to run -->
+        <include name="exampleSuite"/>
+        <include name="exampleTest"/>
+
+      </run>
+    </groups>
+    <packages>
+
+      <package name="org.IntelligentSigma.selenium.suites.*"/>
+
+    </packages>
+    <classes>
+
+      <!--<class name="org.IntelligentSigma.selenium.suites.ExampleSuite"/>-->
+
+    </classes>
+  </test>
+</suite>

@@ -7,6 +7,20 @@
 *.jar
 *.war
 *.ear
+*.iml
+*.ipr
+*.iws
+*.esproj
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+npm-debug.log
+node_modules
+target
+builtAssets
+
+.s3creds
+.monitor
+.DS_Store
+.idea
+.env

@@ -1,0 +1,124 @@
+Java,  Maven and Git Setup (All OS):
+
+Prerequisites:
+
+1) Verify that Java 7 or newer is installed
+From a Terminal window type: 
+java -version
+
+The version should be: "1.7.0_xx" or newer.
+
+2) Verify that Maven 3 is installed
+From a Terminal window, type:
+mvn -version
+
+The version should be: “3.x.x” or newer.
+
+3) Verify that Git is installed
+From a Terminal window, type:
+git --version
+
+The version should be: “1.x.x” or newer.
+
+If you need to install Java, Maven, or Git, follow these instructions, otherwise, skip down to “Installing the Selenium Test Automation Framework”:
+
+Java Install (Mac):
+
+1) How-To Install Java
+http://www.java.com/en/download/help/mac_install.xml
+
+2) Java 7 JDK Download
+http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
+
+3) Add these environment variables to the file “.bash_profile”
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7` (example)
+
+Maven Install (Mac):
+
+1) Install using Homebrew
+http://brew.sh/
+brew install maven
+
+2) Mac Environment Variables
+export M3_HOME=/usr/local/Cellar/maven/3.2.2export M3=$M3_HOME/bin (example)
+export PATH=$PATH:$M3_HOME
+
+3) From a Terminal window, type
+echo $PATH
+The Path in “.bash_profile” should be appended with the following:
+/usr/local/Cellar/maven/3.x.x (example)
+
+Java Install (Windows):
+
+1) How-To Install Java
+http://www.java.com/en/download/help/windows_manual_download.xml
+
+2) Java 7 JDK Download
+http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
+
+3) Windows Environment Variables
+Add this environment variable to Windows:
+JAVA_HOME	-->	C:\Program Files\Java\jdk...  (example)
+
+Maven Install (Windows):
+
+1) Maven Download
+http://maven.apache.org/download.cgi
+Unzip files and place them in a directory such as: 
+C:\Tools\Maven3
+
+2) Windows Environment Variables
+Add these environment variables to Windows:
+M2_HOME	-->	C:\Tools\Maven3\ (same as where you unzipped it)
+M2	-->	 %M2_HOME%\bin
+MAVEN_OPTS	-->	-Xms256m -Xmx512m
+Append the Path variable with these values:
+;%JAVA_HOME%;%M2_HOME%;%M2%;
+
+Java Install (Linux):
+
+1) From a Terminal window, type
+sudo apt-get install python-software-properties
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java7-installer
+
+2) Linux Environment Variables
+Add the following to your “.bashrc” file:
+export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_71 (or the version installed)
+export JDK_HOME=\$JAVA_HOME
+export JAVA_OPTS="-Xmx1024m -XX:MaxPermSize=256m"
+
+Maven Install (Linux):
+
+1) From a Terminal window, type
+sudo apt-get install maven
+
+2) Linux Environment Variables
+Add the following to your “.bashrc” file:
+export M3_HOME=/usr/local/Cellar/maven/3.2.2export M3=$M3_HOME/bin (example)
+export MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=256m"
+
+Git Setup (Windows and Mac):
+
+1) Download Git
+http://git-scm.com/downloads
+Install the program.
+
+Git Setup (Linux):
+
+1) From a Terminal window, type:
+sudo apt-get install git
+
+Installing the Selenium Test Automation Framework
+
+1) Find the project "Common Library" and follow the instructions found in the HOW-TO
+
+2) Clone the repository for the Selenium Framework:
+Change Directory (cd) into your "sandbox", and type:
+git clone https://github.com/IntelligentSigma/selenium-test-automation-framework.git
+
+3) Change Directory (cd) into “selenium-test-automation-framework”, and type:
+mvn clean install -Plocal
+
+This should build the project and run the example test.

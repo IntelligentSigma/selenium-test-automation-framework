@@ -48,3 +48,4 @@ Selenium Test Automation Framework
 
 This library was composed and built with IntelliJ IDEA with Java 7.
 
+Please see the HOW-TO for proper installation information.

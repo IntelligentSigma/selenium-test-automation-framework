@@ -32,7 +32,7 @@
         <run.location>LOCAL</run.location>
         <selenium.server>http://127.0.0.1:4444/wd/hub</selenium.server>      <!-- enter in your local selenium server location here -->
         <selenium.browser>firefox</selenium.browser>       <!-- enter in your desired browser here -->
-        <selenium.browser.version>32</selenium.browser.version>      <!-- enter in your desired browser version here -->
+        <selenium.browser.version>36</selenium.browser.version>      <!-- enter in your desired browser version here -->
         <selenium.os>LINUX</selenium.os>            <!-- enter in your desired OS here -->
         <working.url>http://www.google.com</working.url>              <!-- enter in your base url (your tests destination / tests base) -->
       </properties>
@@ -44,7 +44,7 @@
         <run.location>REMOTE</run.location>
         <selenium.server></selenium.server>      <!-- enter in your local/grid selenium server location here -->
         <selenium.browser>firefox</selenium.browser>       <!-- enter in your desired browser here -->
-        <selenium.browser.version>30</selenium.browser.version>      <!-- enter in your desired browser version here -->
+        <selenium.browser.version>36</selenium.browser.version>      <!-- enter in your desired browser version here -->
         <selenium.os>XP</selenium.os>            <!-- enter in your desired OS here -->
         <working.url></working.url>              <!-- enter in your base url (your tests destination / tests base) -->
       </properties>
@@ -56,8 +56,8 @@
         <run.location>SAUCE</run.location>
         <selenium.server>@ondemand.saucelabs.com:80/wd/hub</selenium.server>
         <selenium.browser>firefox</selenium.browser>      <!-- enter in your desired browser here -->
-        <selenium.browser.version>30</selenium.browser.version>      <!-- enter in your desired browser version here -->
-        <selenium.os>XP</selenium.os>            <!-- enter in your desired OS here -->
+        <selenium.browser.version>36</selenium.browser.version>      <!-- enter in your desired browser version here -->
+        <selenium.os>OSX</selenium.os>            <!-- enter in your desired OS here -->
         <working.url></working.url>              <!-- enter in your base url (your tests destination / tests base) -->
       </properties>
     </profile>

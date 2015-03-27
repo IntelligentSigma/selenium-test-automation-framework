@@ -19,7 +19,7 @@ public class ExampleGoogleResults extends ApplicationHelper {
   /**
    * CSS Locators for the elements on the Google Search Results Page.
    */
-  public static final String searchResult = "#gsr #main #rcnt #center_col #search #rso .g .r a";
+  public static final String searchResult = "#gsr #main #rcnt #center_col #search #rso .g [data-hveid=\"55\"] .r a";
   private WebDriver driver;
 
   /**

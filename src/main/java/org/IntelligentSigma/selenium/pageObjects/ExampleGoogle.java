@@ -21,9 +21,8 @@ public class ExampleGoogle extends ApplicationHelper {
   /**
    * CSS Locators for the elements on the Google Search Page.
    */
-  private final String inputTextBox = "#gsr #mngb #gbq #gbqfw #gbqff #gbqfqw #sb_ifc0 #gbqfq";
-  private final String searchButton = "#gsr #mngb #gbq #gbqfw #gbqfba";
-  //private final String searchButton = "#gsr #mngb #gbq #gbqfw #gbqfb";
+  private final String inputTextBox = "#searchform #tsf #sbtc #sfdiv #sb_ifc0 #gs_lc0 #lst-ib";
+  private final String searchButton = "#searchform #tsf #sbtc #sbds #sblsbb button.lsb";
   private final String searchResultsList = "#gsr #main #appbar #topabar #resultStats";
   private WebDriver driver;
 

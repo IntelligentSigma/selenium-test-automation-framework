@@ -13,7 +13,7 @@
 
   <properties>
     <java.compiler.version>1.7</java.compiler.version>
-    <sauce.version>2.0.7</sauce.version>
+    <sauce.version>2.1.18</sauce.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <selenium-common-library.version>1.0-SNAPSHOT</selenium-common-library.version>
     <testng.version>6.8</testng.version>

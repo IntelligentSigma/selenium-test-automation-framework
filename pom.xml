@@ -13,13 +13,15 @@
 
   <properties>
     <java.compiler.version>1.7</java.compiler.version>
-    <sauce.version>2.0.7</sauce.version>
+    <sauce.version>2.1.18</sauce.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <selenium-common-library.version>1.0-SNAPSHOT</selenium-common-library.version>
     <testng.version>6.8</testng.version>
     <selenium.version>2.45.0</selenium.version>
     <maven-failsafe-plugin.version>2.17</maven-failsafe-plugin.version>
+    <maven-surefire.version>2.18.1</maven-surefire.version>
     <maven-compiler.version>3.2</maven-compiler.version>
+    <json.version>20090211</json.version>
     <selenium.test.suite>${basedir}/target/test-classes/TestRunner.xml</selenium.test.suite>
     <failIfNoTestsRun>true</failIfNoTestsRun>
   </properties>
@@ -98,11 +100,6 @@
       <type>pom</type>
     </dependency>
     <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-java</artifactId>
-      <version>${selenium.version}</version>
-    </dependency>
-    <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-java</artifactId>
       <version>${selenium.version}</version>
@@ -143,6 +140,11 @@
       <artifactId>sauce_testng</artifactId>
       <version>${sauce.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>${json.version}</version>
+    </dependency>
   </dependencies>
   <build>
     <testResources>
@@ -163,14 +165,6 @@
         <configuration>
           <source>${java.compiler.version}</source>
           <target>${java.compiler.version}</target>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.12.4</version>
-        <configuration>
-          <redirectTestOutputToFile>true</redirectTestOutputToFile>
         </configuration>
       </plugin>
       <plugin>
@@ -204,8 +198,22 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
+        <version>${maven-surefire.version}</version>
         <configuration>
-          <skip>true</skip>
+          <redirectTestOutputToFile>true</redirectTestOutputToFile>
+          <suiteXmlFiles>
+            <suiteXmlFile>src/test/resources/TestRunner.1.xml</suiteXmlFile>
+          </suiteXmlFiles>
+          <properties>
+            <property>
+              <name>usedefaultlisteners</name>
+              <value>false</value>
+            </property>
+            <property>
+              <name>listener</name>
+              <value>org.IntelligentSigma.selenium.helpers.RetryListener</value>
+            </property>
+          </properties>
         </configuration>
       </plugin>
       <plugin>

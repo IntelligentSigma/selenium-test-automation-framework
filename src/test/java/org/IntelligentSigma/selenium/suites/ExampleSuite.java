@@ -1,7 +1,10 @@
 package org.IntelligentSigma.selenium.suites;
 
 import org.IntelligentSigma.selenium.helpers.DriverHelper;
+import org.IntelligentSigma.selenium.helpers.RetryFailed;
+import org.IntelligentSigma.selenium.helpers.RetryListener;
 import org.IntelligentSigma.selenium.tests.ExampleTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 /**
@@ -19,6 +22,7 @@ import org.testng.annotations.Test;
  *
  * @author David Mamanakis
  */
+@Listeners(value = {RetryListener.class})
 @Test(groups = {"exampleSuite"})
 public class ExampleSuite extends DriverHelper {
   private ExampleTest exampleTest;
@@ -42,7 +46,7 @@ public class ExampleSuite extends DriverHelper {
    *
    * @throws Exception
    */
-  @Test(groups = {"exampleTest"})
+  @Test(groups = {"exampleTest"}, retryAnalyzer = RetryFailed.class)
   public void runningAnExampleTestFromAnExampleTestSuite() throws Exception {
     exampleTest.searchUsingCommonLib();
   }

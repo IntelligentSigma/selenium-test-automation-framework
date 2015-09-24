@@ -16,13 +16,13 @@
     <sauce.version>2.1.18</sauce.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <selenium-common-library.version>1.0-SNAPSHOT</selenium-common-library.version>
-    <testng.version>6.8</testng.version>
-    <selenium.version>2.45.0</selenium.version>
-    <maven-failsafe-plugin.version>2.17</maven-failsafe-plugin.version>
+    <testng.version>6.8.8</testng.version>
+    <selenium.version>2.47.1</selenium.version>
+    <maven-failsafe-plugin.version>2.18.1</maven-failsafe-plugin.version>
     <maven-surefire.version>2.18.1</maven-surefire.version>
-    <maven-compiler.version>3.2</maven-compiler.version>
+    <maven-compiler.version>3.3</maven-compiler.version>
     <json.version>20090211</json.version>
-    <selenium.test.suite>${basedir}/target/test-classes/TestRunner.xml</selenium.test.suite>
+    <!-- <selenium.test.suite>${basedir}/target/test-classes/TestRunner.xml</selenium.test.suite> -->
     <failIfNoTestsRun>true</failIfNoTestsRun>
   </properties>
 
@@ -34,7 +34,7 @@
         <run.location>LOCAL</run.location>
         <selenium.server>http://127.0.0.1:4444/wd/hub</selenium.server>      <!-- enter in your local selenium server location here -->
         <selenium.browser>firefox</selenium.browser>       <!-- enter in your desired browser here -->
-        <selenium.browser.version>36</selenium.browser.version>      <!-- enter in your desired browser version here -->
+        <selenium.browser.version>40</selenium.browser.version>      <!-- enter in your desired browser version here -->
         <selenium.os>LINUX</selenium.os>            <!-- enter in your desired OS here -->
         <working.url>http://www.google.com</working.url>              <!-- enter in your base url (your tests destination / tests base) -->
       </properties>
@@ -46,7 +46,7 @@
         <run.location>REMOTE</run.location>
         <selenium.server></selenium.server>      <!-- enter in your local/grid selenium server location here -->
         <selenium.browser>firefox</selenium.browser>       <!-- enter in your desired browser here -->
-        <selenium.browser.version>36</selenium.browser.version>      <!-- enter in your desired browser version here -->
+        <selenium.browser.version>40</selenium.browser.version>      <!-- enter in your desired browser version here -->
         <selenium.os>XP</selenium.os>            <!-- enter in your desired OS here -->
         <working.url></working.url>              <!-- enter in your base url (your tests destination / tests base) -->
       </properties>
@@ -58,7 +58,7 @@
         <run.location>SAUCE</run.location>
         <selenium.server>@ondemand.saucelabs.com:80/wd/hub</selenium.server>
         <selenium.browser>firefox</selenium.browser>      <!-- enter in your desired browser here -->
-        <selenium.browser.version>36</selenium.browser.version>      <!-- enter in your desired browser version here -->
+        <selenium.browser.version>40</selenium.browser.version>      <!-- enter in your desired browser version here -->
         <selenium.os>OSX</selenium.os>            <!-- enter in your desired OS here -->
         <working.url></working.url>              <!-- enter in your base url (your tests destination / tests base) -->
       </properties>
@@ -202,7 +202,7 @@
         <configuration>
           <redirectTestOutputToFile>true</redirectTestOutputToFile>
           <suiteXmlFiles>
-            <suiteXmlFile>src/test/resources/TestRunner.1.xml</suiteXmlFile>
+            <suiteXmlFile>src/test/resources/TestRunner.xml</suiteXmlFile>
           </suiteXmlFiles>
           <properties>
             <property>

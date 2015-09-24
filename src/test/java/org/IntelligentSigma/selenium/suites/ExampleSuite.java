@@ -23,7 +23,6 @@ import org.testng.annotations.Test;
  * @author David Mamanakis
  */
 @Listeners(value = {RetryListener.class})
-@Test(groups = {"exampleSuite"})
 public class ExampleSuite extends DriverHelper {
   private ExampleTest exampleTest;
 

@@ -10,7 +10,7 @@
   <!-- Browser Settings = Please put your browser selections in this section. They can include Chrome, FireFox, IE, Safari, etc.
   For CHROME (and maybe others) you will need to install the Selenium Chrome Driver into your home directory (for either Windows or Linux) -->
   <parameter name="selenium.browser" value="firefox"/>
-  <parameter name="selenium.browser.version" value="32"/>
+  <parameter name="selenium.browser.version" value="40"/>
 
   <!--<parameter name="selenium.browser" value="chrome"/>-->
   <!--<parameter name="selenium.browser.version" value="37"/>-->

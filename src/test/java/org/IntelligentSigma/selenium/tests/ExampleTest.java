@@ -53,7 +53,7 @@ public class ExampleTest extends ApplicationHelper {
 
     String mainTitle = "Google";
     String searchResultsTitle = "1930 Ford Model A - Google Search";
-    String searchResults = "Wikipedia";
+    String searchResults = "Images";
     String searchString = "1930 Ford Model A";
     ExampleGoogle exampleGoogle = new ExampleGoogle(driver);
     String url = driverHelper.getWorkingUrl();
